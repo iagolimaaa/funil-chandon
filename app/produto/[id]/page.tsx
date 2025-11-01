@@ -23,7 +23,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
     ],
   },
   "colane-ghition": {
@@ -42,7 +41,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
     ],
   },
   "souany-delution": {
@@ -61,7 +59,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
     ],
   },
   "sauky-edition": {
@@ -81,7 +78,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
     ],
   },
   "galaxia-edition": {
@@ -102,7 +98,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
       "Certificado de autenticidade",
     ],
   },
@@ -122,7 +117,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
     ],
   },
   "calaty-edition": {
