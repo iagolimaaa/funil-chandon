@@ -288,7 +288,7 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
                   Adicionar ao Carrinho
                 </button>
 
-                <p className="text-center text-purple-200/60 text-sm">Frete grátis para todo Brasil</p>
+               
               </div>
             </div>
           </div>
