@@ -1,3 +1,4 @@
+
 "use client"
 
 import { use } from "react"
@@ -18,7 +19,6 @@ const productsData: Record<string, any> = {
     stars: 5,
     reviews: 284,
     badge: "Mais Vendido",
-    rescueUrl: "https://example.com/saleny-edition", // URL de resgatar
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -27,7 +27,145 @@ const productsData: Record<string, any> = {
       "Frete grátis",
     ],
   },
-  // outros produtos aqui...
+  "colane-ghition": {
+    id: "colane-ghition",
+    name: "Colane Ghition",
+    subtitle: "Especiarias Nobres",
+    description: "Sabor encorpado com toques de especiarias e amadeirado",
+    fullDescription:
+      "Uma experiência sofisticada que combina a intensidade das especiarias nobres com notas amadeiradas. O Colane Ghition é ideal para paladares que apreciam complexidade e profundidade, oferecendo camadas de sabor que se revelam a cada gole.",
+    price: 0.0,
+    image: "/kit-2-colane.png",
+    stars: 5,
+    reviews: 156,
+    features: [
+      "4 garrafas de 750ml",
+      "2 taças exclusivas",
+      "Balde térmico premium",
+      "Embalagem presenteável",
+      "Frete grátis",
+    ],
+  },
+  "souany-delution": {
+    id: "souany-delution",
+    name: "Souany Delution",
+    subtitle: "Elegância Pura",
+    description: "Elegância e sofisticação em cada gole, notas cítricas",
+    fullDescription:
+      "Souany Delution representa a elegância em sua forma mais pura. Com notas cítricas refrescantes e um final suave, este espumante é perfeito para quem busca sofisticação sem abrir mão da leveza. Ideal para brindes e momentos de celebração.",
+    price: 0.0,
+    image: "/kit-3-souany.png",
+    stars: 5,
+    reviews: 198,
+    features: [
+      "4 garrafas de 750ml",
+      "2 taças exclusivas",
+      "Balde térmico premium",
+      "Embalagem presenteável",
+      "Frete grátis",
+    ],
+  },
+  "sauky-edition": {
+    id: "sauky-edition",
+    name: "Sauky Edition",
+    subtitle: "Complexidade Refinada",
+    description: "Complexo e refinado, perfeito para ocasiões especiais",
+    fullDescription:
+      "Sauky Edition é a escolha dos conhecedores. Com sua complexidade refinada e equilíbrio perfeito entre doçura e acidez, este espumante premium é ideal para ocasiões verdadeiramente especiais. Cada garrafa conta uma história de tradição e inovação.",
+    price: 0.0,
+    image: "/kit-4-sauky.png",
+    stars: 5,
+    reviews: 312,
+    badge: "Premium",
+    features: [
+      "4 garrafas de 750ml",
+      "2 taças exclusivas",
+      "Balde térmico premium",
+      "Embalagem presenteável",
+      "Frete grátis",
+    ],
+  },
+  "galaxia-edition": {
+    id: "galaxia-edition",
+    name: "Galaxia Edition",
+    subtitle: "Edição Limitada",
+    description: "A edição mais exclusiva - Sabor cósmico único e inesquecível",
+    fullDescription:
+      "A joia da coroa da coleção Chandon. Galaxia Edition é uma edição limitada que oferece uma experiência verdadeiramente cósmica. Com sabores únicos que transcendem o comum, este espumante é para aqueles que buscam o extraordinário. Disponibilidade limitada.",
+    price: 0.0,
+    image: "/kit-5-galaxia.png",
+    stars: 5,
+    reviews: 89,
+    badge: "Exclusivo",
+    featured: true,
+    features: [
+      "4 garrafas de 750ml",
+      "2 taças exclusivas",
+      "Balde térmico premium",
+      "Embalagem presenteável",
+      "Frete grátis",
+      "Certificado de autenticidade",
+    ],
+  },
+  "legacy-edition": {
+    id: "legacy-edition",
+    name: "Legacy Edition",
+    subtitle: "Tradição Atemporal",
+    description: "Clássico que atravessa gerações com sabor inconfundível",
+    fullDescription:
+      "Legacy Edition é uma homenagem à tradição Chandon. Com um sabor inconfundível que atravessa gerações, este espumante clássico nunca sai de moda. Perfeito para quem aprecia a autenticidade e a história por trás de cada garrafa.",
+    price: 0.0,
+    image: "/kit-6-legacy.png",
+    stars: 5,
+    reviews: 421,
+    features: [
+      "4 garrafas de 750ml",
+      "2 taças exclusivas",
+      "Balde térmico premium",
+      "Embalagem presenteável",
+      "Frete grátis",
+    ],
+  },
+  "calaty-edition": {
+    id: "calaty-edition",
+    name: "Calaty Edition",
+    subtitle: "Harmonia Celestial",
+    description: "Equilíbrio perfeito entre doçura e acidez, notas florais",
+    fullDescription:
+      "Calaty Edition traz uma harmonia celestial ao paladar. Com equilíbrio perfeito entre doçura e acidez, complementado por delicadas notas florais, este espumante é ideal para quem busca uma experiência refinada e equilibrada.",
+    price: 0.0,
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2031%20de%20out.%20de%202025%2C%2021_10_48-7wzoeRJcBUAK8IHvmMNJfMZ5yMPYgW.png",
+    stars: 5,
+    reviews: 167,
+    features: [
+      "4 garrafas de 750ml",
+      "2 taças exclusivas",
+      "Balde térmico premium",
+      "Embalagem presenteável",
+      "Frete grátis",
+    ],
+  },
+  "raany-edition": {
+    id: "raany-edition",
+    name: "Raany Edition",
+    subtitle: "Intensidade Cósmica",
+    description: "Sabor intenso e marcante, perfeito para paladares ousados",
+    fullDescription:
+      "Raany Edition é para os paladares mais ousados. Com sabor intenso e marcante, este espumante oferece uma experiência cósmica única. Cada gole revela camadas de complexidade que desafiam e encantam os sentidos.",
+    price: 0.0,
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2031%20de%20out.%20de%202025%2C%2021_10_20-8hqs46PEyk5Jwo6Dz7Mzt6VL4jZkr3.png",
+    stars: 5,
+    reviews: 203,
+    features: [
+      "4 garrafas de 750ml",
+      "2 taças exclusivas",
+      "Balde térmico premium",
+      "Embalagem presenteável",
+      "Frete grátis",
+    ],
+  },
 }
 
 export default function ProdutoPage({ params }: { params: Promise<{ id: string }> }) {
@@ -150,15 +288,6 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
                   <ShoppingCart className="h-5 w-5" />
                   Adicionar ao Carrinho
                 </button>
-
-                {/* Agora o Link está com a classe `block` e `w-full` para funcionar como um botão clicável */}
-                <Link
-                  href={product.rescueUrl}
-                  className="w-full py-4 bg-gradient-to-r from-green-400 to-green-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-green-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 block"
-                >
-                  <Check className="h-5 w-5" />
-                  Resgatar
-                </Link>
 
                 <p className="text-center text-purple-200/60 text-sm">Frete grátis para todo Brasil</p>
               </div>
