@@ -114,12 +114,27 @@ export const productsData: Record<string, any> = {
 }
 
 
-// ProdutoPage.tsx
 import Link from "next/link"
 import Image from "next/image"
 import { use } from "react"
 import { ArrowLeft, Check, ShoppingCart, Sparkles, Star } from "lucide-react"
-import { productsData } from "@/data/productsData"
+
+const productsData: Record<string, any> = {
+  "1": {
+    name: "Espumante Chandon Réserve Brut",
+    subtitle: "Clássico e elegante",
+    description: "Um espumante versátil para todas as ocasiões.",
+    fullDescription: "Produzido com uvas selecionadas, ideal para celebrações.",
+    image: "/produtos/chandon-brut.webp",
+    price: 89.90,
+    stars: 5,
+    reviews: 124,
+    badge: "Mais vendido",
+    features: ["750ml", "Brut", "Origem: Brasil"],
+    redeemUrl: "https://site1.com"
+  },
+  // Adicione os produtos 2 a 8 aqui com suas respectivas URLs
+}
 
 export default function ProdutoPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
@@ -207,4 +222,54 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
                     <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-purple-200/70 font-semibold">{
+                <span className="text-purple-200/70 font-semibold">{product.stars}.0</span>
+                <span className="text-purple-200/50">({product.reviews} avaliações)</span>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-900/40 to-black/60 border border-yellow-400/30 rounded-xl p-6">
+                <div className="flex items-baseline gap-3">
+                  <span className="text-4xl font-black bg-gradient-to-r from-yellow-300 to-yellow-400 bg-clip-text text-transparent">
+                    R$ {product.price.toFixed(2).replace(".", ",")}
+                  </span>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-lg mb-2">Sobre este produto</h3>
+                <p className="text-purple-200/70 leading-relaxed">{product.fullDescription}</p>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-lg mb-3">O que está incluído</h3>
+                <ul className="space-y-2">
+                  {product.features.map((feature: string, index: number) => (
+                    <li key={index} className="flex items-center gap-2 text-purple-200/80">
+                      <Check className="h-4 w-4 text-yellow-400 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-3 pt-4">
+                <button
+                  onClick={() => window.open(product.redeemUrl, "_blank")}
+                  className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
+                >
+                  <ShoppingCart className="h-5 w-5" />
+                  <span>Resgatar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-purple-900/30 bg-background/40 backdrop-blur-xl py-8 relative z-10 mt-12">
+        <div className="container mx-auto px-4 text-center text-purple-200/50 text-sm">
+          <p>© 2025 Chandon Galaxia. Beba com moderação.</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
