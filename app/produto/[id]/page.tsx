@@ -5,166 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ShoppingCart, Star, Check, Sparkles } from "lucide-react"
 
-const productsData: Record<string, any> = {
-  "saleny-edition": {
-    id: "saleny-edition",
-    name: "Saleny Edition",
-    subtitle: "Frutas Vermelhas",
-    description: "Edição exclusiva com notas de frutas vermelhas e toque floral",
-    fullDescription:
-      "O Chandon Saleny Edition é uma celebração dos sabores mais vibrantes. Com notas predominantes de frutas vermelhas frescas, como morango e framboesa, complementadas por um delicado toque floral, este espumante oferece uma experiência sensorial única. Perfeito para momentos especiais e celebrações inesquecíveis.",
-    price: 0.0,
-    image: "/kit-1-saleny.png",
-    stars: 5,
-    reviews: 284,
-    badge: "Mais Vendido",
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-    ],
-  },
-  "colane-ghition": {
-    id: "colane-ghition",
-    name: "Colane Ghition",
-    subtitle: "Especiarias Nobres",
-    description: "Sabor encorpado com toques de especiarias e amadeirado",
-    fullDescription:
-      "Uma experiência sofisticada que combina a intensidade das especiarias nobres com notas amadeiradas. O Colane Ghition é ideal para paladares que apreciam complexidade e profundidade, oferecendo camadas de sabor que se revelam a cada gole.",
-    price: 0.0,
-    image: "/kit-2-colane.png",
-    stars: 5,
-    reviews: 156,
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-    ],
-  },
-  "souany-delution": {
-    id: "souany-delution",
-    name: "Souany Delution",
-    subtitle: "Elegância Pura",
-    description: "Elegância e sofisticação em cada gole, notas cítricas",
-    fullDescription:
-      "Souany Delution representa a elegância em sua forma mais pura. Com notas cítricas refrescantes e um final suave, este espumante é perfeito para quem busca sofisticação sem abrir mão da leveza. Ideal para brindes e momentos de celebração.",
-    price: 0.0,
-    image: "/kit-3-souany.png",
-    stars: 5,
-    reviews: 198,
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-    ],
-  },
-  "sauky-edition": {
-    id: "sauky-edition",
-    name: "Sauky Edition",
-    subtitle: "Complexidade Refinada",
-    description: "Complexo e refinado, perfeito para ocasiões especiais",
-    fullDescription:
-      "Sauky Edition é a escolha dos conhecedores. Com sua complexidade refinada e equilíbrio perfeito entre doçura e acidez, este espumante premium é ideal para ocasiões verdadeiramente especiais. Cada garrafa conta uma história de tradição e inovação.",
-    price: 0.0,
-    image: "/kit-4-sauky.png",
-    stars: 5,
-    reviews: 312,
-    badge: "Premium",
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-    ],
-  },
-  "galaxia-edition": {
-    id: "galaxia-edition",
-    name: "Galaxia Edition",
-    subtitle: "Edição Limitada",
-    description: "A edição mais exclusiva - Sabor cósmico único e inesquecível",
-    fullDescription:
-      "A joia da coroa da coleção Chandon. Galaxia Edition é uma edição limitada que oferece uma experiência verdadeiramente cósmica. Com sabores únicos que transcendem o comum, este espumante é para aqueles que buscam o extraordinário. Disponibilidade limitada.",
-    price: 0.0,
-    image: "/kit-5-galaxia.png",
-    stars: 5,
-    reviews: 89,
-    badge: "Exclusivo",
-    featured: true,
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-      "Certificado de autenticidade",
-    ],
-  },
-  "legacy-edition": {
-    id: "legacy-edition",
-    name: "Legacy Edition",
-    subtitle: "Tradição Atemporal",
-    description: "Clássico que atravessa gerações com sabor inconfundível",
-    fullDescription:
-      "Legacy Edition é uma homenagem à tradição Chandon. Com um sabor inconfundível que atravessa gerações, este espumante clássico nunca sai de moda. Perfeito para quem aprecia a autenticidade e a história por trás de cada garrafa.",
-    price: 0.0,
-    image: "/kit-6-legacy.png",
-    stars: 5,
-    reviews: 421,
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-    ],
-  },
-  "calaty-edition": {
-    id: "calaty-edition",
-    name: "Calaty Edition",
-    subtitle: "Harmonia Celestial",
-    description: "Equilíbrio perfeito entre doçura e acidez, notas florais",
-    fullDescription:
-      "Calaty Edition traz uma harmonia celestial ao paladar. Com equilíbrio perfeito entre doçura e acidez, complementado por delicadas notas florais, este espumante é ideal para quem busca uma experiência refinada e equilibrada.",
-    price: 0.0,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2031%20de%20out.%20de%202025%2C%2021_10_48-7wzoeRJcBUAK8IHvmMNJfMZ5yMPYgW.png",
-    stars: 5,
-    reviews: 167,
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-    ],
-  },
-  "raany-edition": {
-    id: "raany-edition",
-    name: "Raany Edition",
-    subtitle: "Intensidade Cósmica",
-    description: "Sabor intenso e marcante, perfeito para paladares ousados",
-    fullDescription:
-      "Raany Edition é para os paladares mais ousados. Com sabor intenso e marcante, este espumante oferece uma experiência cósmica única. Cada gole revela camadas de complexidade que desafiam e encantam os sentidos.",
-    price: 0.0,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2031%20de%20out.%20de%202025%2C%2021_10_20-8hqs46PEyk5Jwo6Dz7Mzt6VL4jZkr3.png",
-    stars: 5,
-    reviews: 203,
-    features: [
-      "4 garrafas de 750ml",
-      "2 taças exclusivas",
-      "Balde térmico premium",
-      "Embalagem presenteável",
-    ],
-  },
-}
-
-import Link from "next/link"
-import Image from "next/image"
-import { use } from "react"
-import { ArrowLeft, Check, ShoppingCart, Sparkles, Star } from "lucide-react"
-
-const productsData: Record<string, any> = {
+// productsData.ts
+export const productsData: Record<string, any> = {
   "1": {
     name: "Espumante Chandon Réserve Brut",
     subtitle: "Clássico e elegante",
@@ -271,6 +113,14 @@ const productsData: Record<string, any> = {
   }
 }
 
+
+// ProdutoPage.tsx
+import Link from "next/link"
+import Image from "next/image"
+import { use } from "react"
+import { ArrowLeft, Check, ShoppingCart, Sparkles, Star } from "lucide-react"
+import { productsData } from "@/data/productsData"
+
 export default function ProdutoPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
   const product = productsData[id]
@@ -357,8 +207,4 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
                     <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-purple-200/70 font-semibold">{product.stars}.0</span>
-                <span className="text-purple-200/50">({product.reviews} avaliações)</span>
-              </div>
-
-              <div className="bg
+                <span className="text-purple-200/70 font-semibold">{
