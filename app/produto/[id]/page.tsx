@@ -163,7 +163,113 @@ import Link from "next/link"
 import Image from "next/image"
 import { use } from "react"
 import { ArrowLeft, Check, ShoppingCart, Sparkles, Star } from "lucide-react"
-import { productsData } from "@/data/products"
+
+const productsData: Record<string, any> = {
+  "1": {
+    name: "Espumante Chandon Réserve Brut",
+    subtitle: "Clássico e elegante",
+    description: "Um espumante versátil para todas as ocasiões.",
+    fullDescription: "Produzido com uvas selecionadas, ideal para celebrações.",
+    image: "/produtos/chandon-brut.webp",
+    price: 89.90,
+    stars: 5,
+    reviews: 124,
+    badge: "Mais vendido",
+    features: ["750ml", "Brut", "Origem: Brasil"],
+    redeemUrl: "https://site1.com"
+  },
+  "2": {
+    name: "Chandon Passion",
+    subtitle: "Frutado e refrescante",
+    description: "Perfeito para drinks tropicais.",
+    fullDescription: "Notas de frutas tropicais e final suave.",
+    image: "/produtos/chandon-passion.webp",
+    price: 94.90,
+    stars: 4,
+    reviews: 87,
+    badge: "Favorito do verão",
+    features: ["750ml", "Demi-sec", "Origem: Brasil"],
+    redeemUrl: "https://site2.com"
+  },
+  "3": {
+    name: "Chandon Excellence",
+    subtitle: "Premium e sofisticado",
+    description: "Para momentos especiais.",
+    fullDescription: "Blend exclusivo com envelhecimento prolongado.",
+    image: "/produtos/chandon-excellence.webp",
+    price: 149.90,
+    stars: 5,
+    reviews: 45,
+    badge: "Edição limitada",
+    features: ["750ml", "Brut", "Origem: Brasil"],
+    redeemUrl: "https://site3.com"
+  },
+  "4": {
+    name: "Chandon Rosé",
+    subtitle: "Delicado e floral",
+    description: "Ideal para harmonizar com pratos leves.",
+    fullDescription: "Notas de frutas vermelhas e toque floral.",
+    image: "/produtos/chandon-rose.webp",
+    price: 99.90,
+    stars: 4,
+    reviews: 102,
+    badge: "Rosé do ano",
+    features: ["750ml", "Brut Rosé", "Origem: Brasil"],
+    redeemUrl: "https://site4.com"
+  },
+  "5": {
+    name: "Chandon Délice",
+    subtitle: "Doce e vibrante",
+    description: "Perfeito para sobremesas.",
+    fullDescription: "Aromas intensos e paladar adocicado.",
+    image: "/produtos/chandon-delice.webp",
+    price: 92.90,
+    stars: 4,
+    reviews: 76,
+    badge: "Combina com doces",
+    features: ["750ml", "Demi-sec", "Origem: Brasil"],
+    redeemUrl: "https://site5.com"
+  },
+  "6": {
+    name: "Chandon Réserve Rosé",
+    subtitle: "Elegância em rosé",
+    description: "Refinado e equilibrado.",
+    fullDescription: "Blend de uvas tintas com frescor marcante.",
+    image: "/produtos/chandon-reserve-rose.webp",
+    price: 104.90,
+    stars: 5,
+    reviews: 63,
+    badge: "Novo lançamento",
+    features: ["750ml", "Brut Rosé", "Origem: Brasil"],
+    redeemUrl: "https://site6.com"
+  },
+  "7": {
+    name: "Chandon Blanc de Blancs",
+    subtitle: "Fresco e cítrico",
+    description: "Feito só com uvas brancas.",
+    fullDescription: "Ideal para frutos do mar e saladas.",
+    image: "/produtos/chandon-blanc.webp",
+    price: 109.90,
+    stars: 5,
+    reviews: 58,
+    badge: "100% Chardonnay",
+    features: ["750ml", "Brut", "Origem: Brasil"],
+    redeemUrl: "https://site7.com"
+  },
+  "8": {
+    name: "Chandon Vintage",
+    subtitle: "Safra especial",
+    description: "Produção limitada e exclusiva.",
+    fullDescription: "Espumante de safra única com perfil complexo.",
+    image: "/produtos/chandon-vintage.webp",
+    price: 159.90,
+    stars: 5,
+    reviews: 39,
+    badge: "Vintage",
+    features: ["750ml", "Brut", "Origem: Brasil"],
+    redeemUrl: "https://site8.com"
+  }
+}
 
 export default function ProdutoPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
@@ -255,52 +361,4 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
                 <span className="text-purple-200/50">({product.reviews} avaliações)</span>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-900/40 to-black/60 border border-yellow-400/30 rounded-xl p-6">
-                <div className="flex items-baseline gap-3">
-                  <span className="text-4xl font-black bg-gradient-to-r from-yellow-300 to-yellow-400 bg-clip-text text-transparent">
-                    R$ {product.price.toFixed(2).replace(".", ",")}
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-2">Sobre este produto</h3>
-                <p className="text-purple-200/70 leading-relaxed">{product.fullDescription}</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-lg mb-3">O que está incluído</h3>
-                <ul className="space-y-2">
-                  {product.features.map((feature: string, index: number) => (
-                    <li key={index} className="flex items-center gap-2 text-purple-200/80">
-                      <Check className="h-4 w-4 text-yellow-400 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="space-y-3 pt-4">
-                <Link
-                  href={product.redeemUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full block py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
-                >
-                  <ShoppingCart className="h-5 w-5" />
-                  Resgatar
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="border-t border-purple-900/30 bg-background/40 backdrop-blur-xl py-8 relative z-10 mt-12">
-        <div className="container mx-auto px-4 text-center text-purple-200/50 text-sm">
-          <p>© 2025 Chandon Galaxia. Beba com moderação.</p>
-        </div>
-      </footer>
-    </div>
-  )
-}
+              <div className="bg
