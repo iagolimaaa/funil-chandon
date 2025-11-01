@@ -277,7 +277,7 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
               <div className="space-y-3 pt-4">
                 <button className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
                   <ShoppingCart className="h-5 w-5" />
-                  Adicionar ao Carrinho
+                  Resgatar
                 </button>
 
                
