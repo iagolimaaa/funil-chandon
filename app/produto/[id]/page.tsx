@@ -142,7 +142,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
     ],
   },
   "raany-edition": {
@@ -162,7 +161,6 @@ const productsData: Record<string, any> = {
       "2 taças exclusivas",
       "Balde térmico premium",
       "Embalagem presenteável",
-      "Frete grátis",
     ],
   },
 }
