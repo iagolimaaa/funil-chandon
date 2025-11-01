@@ -97,7 +97,7 @@ const products = [
     originalPrice: 199.0,
     price: 0.0,
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2031%20de%20out.%20de%202025%2021_10_20-8hqs46PEyk5Jwo6Dz7Mzt6VL4jZkr3.png",
+      "https://i.ibb.co/p6GYG2g2/Chat-GPT-Image-31-de-out-de-2025-21-10-20-1.png",
     stars: 5,
     reviews: 203,
   },
