@@ -78,7 +78,7 @@ export default function JogoPage() {
                   <h3 className="font-bold text-lg text-yellow-200 mb-2">Missão Cósmica</h3>
                   <p className="text-purple-200/80 leading-relaxed">
                     Clique nas cartas para desvendar os segredos da galáxia e encontre os pares. Complete a missão para
-                    desbloquear sua recompensa especial de <span className="font-bold text-yellow-300">70% OFF</span>
+                    desbloquear sua recompensa especial de <span className="font-bold text-yellow-300">100% OFF</span>
                   </p>
                 </div>
               </div>
