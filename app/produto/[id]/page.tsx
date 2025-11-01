@@ -1,4 +1,3 @@
-
 "use client"
 
 import { use } from "react"
@@ -19,6 +18,7 @@ const productsData: Record<string, any> = {
     stars: 5,
     reviews: 284,
     badge: "Mais Vendido",
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -38,6 +38,7 @@ const productsData: Record<string, any> = {
     image: "/kit-2-colane.png",
     stars: 5,
     reviews: 156,
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -57,6 +58,7 @@ const productsData: Record<string, any> = {
     image: "/kit-3-souany.png",
     stars: 5,
     reviews: 198,
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -76,7 +78,7 @@ const productsData: Record<string, any> = {
     image: "/kit-4-sauky.png",
     stars: 5,
     reviews: 312,
-    badge: "Premium",
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -96,8 +98,7 @@ const productsData: Record<string, any> = {
     image: "/kit-5-galaxia.png",
     stars: 5,
     reviews: 89,
-    badge: "Exclusivo",
-    featured: true,
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -118,6 +119,7 @@ const productsData: Record<string, any> = {
     image: "/kit-6-legacy.png",
     stars: 5,
     reviews: 421,
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -138,6 +140,7 @@ const productsData: Record<string, any> = {
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2031%20de%20out.%20de%202025%2C%2021_10_48-7wzoeRJcBUAK8IHvmMNJfMZ5yMPYgW.png",
     stars: 5,
     reviews: 167,
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -158,6 +161,7 @@ const productsData: Record<string, any> = {
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2031%20de%20out.%20de%202025%2C%2021_10_20-8hqs46PEyk5Jwo6Dz7Mzt6VL4jZkr3.png",
     stars: 5,
     reviews: 203,
+    checkoutUrl: "https://google.com", // URL personalizada de checkout
     features: [
       "4 garrafas de 750ml",
       "2 taças exclusivas",
@@ -284,10 +288,12 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
               </div>
 
               <div className="space-y-3 pt-4">
-                <button className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
-                  <ShoppingCart className="h-5 w-5" />
-                  Adicionar ao Carrinho
-                </button>
+                <Link href={product.checkoutUrl} passHref>
+                  <button className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
+                    <ShoppingCart className="h-5 w-5" />
+                    Adicionar ao Carrinho
+                  </button>
+                </Link>
 
                 <p className="text-center text-purple-200/60 text-sm">Frete grátis para todo Brasil</p>
               </div>
