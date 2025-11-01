@@ -159,6 +159,12 @@ const productsData: Record<string, any> = {
   },
 }
 
+import Link from "next/link"
+import Image from "next/image"
+import { use } from "react"
+import { ArrowLeft, Check, ShoppingCart, Sparkles, Star } from "lucide-react"
+import { productsData } from "@/data/products"
+
 export default function ProdutoPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
   const product = productsData[id]
@@ -275,12 +281,15 @@ export default function ProdutoPage({ params }: { params: Promise<{ id: string }
               </div>
 
               <div className="space-y-3 pt-4">
-                <button className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
+                <Link
+                  href={product.redeemUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full block py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
+                >
                   <ShoppingCart className="h-5 w-5" />
                   Resgatar
-                </button>
-
-               
+                </Link>
               </div>
             </div>
           </div>
